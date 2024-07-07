@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- HTML Meta Tags -->
+    <title>Shared Diary</title>
+    <meta name="description" content="">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="/image.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Shared Diary">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="/image.jpg">
+    <meta property="twitter:url" content="/image.jpg">
+    <meta name="twitter:title" content="Shared Diary">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="">
+
+    <!-- Meta Tags Generated via https://www.opengraph.xyz -->
+    <title>Shared Diary</title>
+    <link rel="icon" href="/icon.png" type="image/x-icon">
+  </head>
+  <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.33/moment-timezone-with-data-10-year-range.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+    <script type="module" src="/main.js"></script>
+     <script src="/draggable.js"></script>
+   
+    <link type="text/css" rel="stylesheet" href="/style.css" />
+
+    <div class="menu">
+      <div id="preword">
+        
+          Welcome to the shared diary! Feel free to share your thoughts and
+          experiences with others.</br> made by (joyce) => {joycezheng@nyu.edu} <3
+       
+      </div>
+  <div class = "menu-btn">
+      <button id="menu-new">create new diary</button>
+      <button id="menu-save">download diaries</button>
+    </div>
+     
+    </div>
+
+    <div id="entryLists">
+      <div class="entry">
+        <div class="date"></div>
+        <div class = "name"></div>
+        <div class="text">
+        </div>
+        <div class="images"></div>
+      </div>
+    </div>
+    <!-- create new entry -->
+
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>What do you want to say?</h3>
+        <input type="text"  id="contentInput" />
+        <h3>Your name (you can say "anonymous")</h3>
+        <input type="text" id="nameInput" />
+        <input type="file" id="imageUpload" accept="image/*" />
+        <button id="submitBtn">submit the diary</button>
+      </div>
+    </div>
+
+    <!-- create new entry -->
+
+    <!-- Repeat the .entry block for each paragraph with its respective date and content -->
+  </body>
+</html>
