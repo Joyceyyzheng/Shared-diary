@@ -4,7 +4,6 @@ let username
 let entryLists = document.getElementById("entryLists")
 
 newBtn.addEventListener("click", () => {
-  console.log("created new entry")
   //pop up new page
   modal.style.display = "block"
 })
@@ -35,7 +34,6 @@ submitBtn.onclick = function () {
 
 let saveBtn = document.getElementById("menu-save")
 saveBtn.addEventListener("click", () => {
-  console.log("download diaries")
   downloadDiaries()
 })
 
@@ -89,7 +87,6 @@ function uploadEntry(text, _name, image, date) {
   let formData = new FormData()
 
   if (image) {
-    console.log(image)
     formData.append("image-upload", image[0])
   }
 
@@ -137,7 +134,6 @@ function createEntry(text, _name, imageData, date) {
   let dateDiv = document.createElement("div")
   dateDiv.className = "date"
   dateDiv.textContent = moment(date).tz("America/New_York").format("LLL")
-  // dateDiv.textContent = date;
 
   let textDiv = document.createElement("div")
   textDiv.className = "text"
@@ -158,8 +154,6 @@ function createEntry(text, _name, imageData, date) {
   if (imageData) {
     img = document.createElement("img")
     img.src = imageData
-    console.log(imageData)
-    // img.style.maxWidth = "100%";
     img.style.marginTop = "10px"
     img.classList.add("images")
     entryContainer.appendChild(img)
@@ -169,7 +163,6 @@ function createEntry(text, _name, imageData, date) {
   toggleButton.className = "toggleBtn"
   toggleButton.textContent = "Fold"
   toggleButton.onclick = function () {
-    console.log("fold btn clicked")
     if (
       textDiv.style.display === "block" ||
       dateDiv.style.display === "block"
